@@ -63,8 +63,8 @@ elif parser['h'] or parser['help']:
     Hello and welcome to {color.LIGHTGREEN_EX}Crucify{color.RESET}!
     I\'m here to help you manage your applications:)
     ==> use {color.LIGHTMAGENTA_EX}i{color.RESET} or {color.LIGHTMAGENTA_EX}install{color.RESET} to install a package
-    {color.BLUE}you can also use {color.LIGHTMAGENTA_EX}--aur{color.BLUE} after the package name to install package from AUR Repositories{color.RESET}
-    AUR mode also supports searching! it will show a list of available packages based on your given package name!
+    {color.BLUE}you can also use {color.LIGHTMAGENTA_EX}--aur{color.BLUE} after the package name to install package from AUR Repositories
+    AUR mode also supports searching! it will show a list of available packages based on your given package name!{color.RESET}
     ==> if you feel like you don\'t need a package anymore, you can always remove it by using {color.LIGHTMAGENTA_EX}r{color.RESET} or {color.LIGHTMAGENTA_EX}remove{color.RESET}.
     ==> use {color.LIGHTMAGENTA_EX}u{color.RESET} or {color.LIGHTMAGENTA_EX}update{color.RESET} to do a full system upgrade.
     ==> to check if you\'re getting the latest packages, use {color.LIGHTMAGENTA_EX}s{color.RESET}  ot {color.LIGHTMAGENTA_EX}sync{color.RESET} to syncronize databases.
