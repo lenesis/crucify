@@ -14,25 +14,26 @@ just download the source code and run `crucify` and it will download and install
 
 ## Usage
 ---
-
+<br>
 you can see all the help you need by using:
 ```bash
 python crucify.py help
 ```
-
+<br>
 to install packages use:
 ```bash
 python crucify.py i package_name
 python crucify.py install package_name
 ```
-both are correct!
-you can also add `--aur` after the package name to use AUR repos
+both are correct! <br>
+you can also add `--aur` after the package name to use AUR repos<br>
+
 to remove:
 ```bash
 python crucify.py r package_name
 python crucify.py remove package_name
 ```
-
+<br>
 to syncronize databases:
 ```bash
 python crucify.py s
