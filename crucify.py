@@ -7,8 +7,8 @@ print (color.GREEN, 'Crucify!', color.RESET, 'Simple and fast package manager.')
 # configurating docopt
 usage = '''
 Usage:
-    crucify i <package_name> [--aur]
-    crucify install <package_name> [--aur]
+    crucify i <package_name>
+    crucify install <package_name>
     crucify r <package_name>
     crucify remove <package_name>
     crucify u 
@@ -27,22 +27,19 @@ Options:
 '''
 print (f'use {color.GREEN}crucify {color.LIGHTMAGENTA_EX}help{color.RESET} for help!')
 parser = libraries.docopt(usage)
-pacm = 'sudo pacman -S'
-if '--aur' in parser:
-    pacm = 'yay'
 if parser['i'] or parser['install']:
     package = parser['<package_name>']
-    term(f'{pacm} {package}')
+    term(f'yay {package}')
 
 elif parser['r'] or parser['remove']:
     package = parser['<package_name>']
-    term(f'sudo pacman -R {package}')
+    term(f'yay -R {package}')
 
 elif parser['u'] or parser['update']:
-    term('sudo pacman -Syyu')
+    term('yay -Syyu')
 
 elif parser['s'] or parser['sync']:
-    term('sudo pacman -Syy')
+    term('yay -Syy')
 
 elif parser['backup']:
     term('sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak')
@@ -63,8 +60,6 @@ elif parser['h'] or parser['help']:
     Hello and welcome to {color.LIGHTGREEN_EX}Crucify{color.RESET}!
     I\'m here to help you manage your applications:)
     ==> use {color.LIGHTMAGENTA_EX}i{color.RESET} or {color.LIGHTMAGENTA_EX}install{color.RESET} to install a package
-    {color.BLUE}you can also use {color.LIGHTMAGENTA_EX}--aur{color.BLUE} after the package name to install package from AUR Repositories
-    AUR mode also supports searching! it will show a list of available packages based on your given package name!{color.RESET}
     ==> if you feel like you don\'t need a package anymore, you can always remove it by using {color.LIGHTMAGENTA_EX}r{color.RESET} or {color.LIGHTMAGENTA_EX}remove{color.RESET}.
     ==> use {color.LIGHTMAGENTA_EX}u{color.RESET} or {color.LIGHTMAGENTA_EX}update{color.RESET} to do a full system upgrade.
     ==> to check if you\'re getting the latest packages, use {color.LIGHTMAGENTA_EX}s{color.RESET}  ot {color.LIGHTMAGENTA_EX}sync{color.RESET} to syncronize databases.
