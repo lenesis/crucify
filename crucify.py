@@ -27,12 +27,12 @@ Options:
 '''
 print (f'use {color.GREEN}crucify {color.LIGHTMAGENTA_EX}help{color.RESET} for help!')
 parser = libraries.docopt(usage)
-pacm = 'sudo pacman'
+pacm = 'sudo pacman -S'
 if '--aur' in parser:
     pacm = 'yay'
 if parser['i'] or parser['install']:
     package = parser['<package_name>']
-    term(f'{pacm} -S {package}')
+    term(f'{pacm} {package}')
 
 elif parser['r'] or parser['remove']:
     package = parser['<package_name>']
@@ -64,6 +64,7 @@ elif parser['h'] or parser['help']:
     I\'m here to help you manage your applications:)
     ==> use {color.LIGHTMAGENTA_EX}i{color.RESET} or {color.LIGHTMAGENTA_EX}install{color.RESET} to install a package
     {color.BLUE}you can also use {color.LIGHTMAGENTA_EX}--aur{color.BLUE} after the package name to install package from AUR Repositories{color.RESET}
+    AUR mode also supports searching! it will show a list of available packages based on your given package name!
     ==> if you feel like you don\'t need a package anymore, you can always remove it by using {color.LIGHTMAGENTA_EX}r{color.RESET} or {color.LIGHTMAGENTA_EX}remove{color.RESET}.
     ==> use {color.LIGHTMAGENTA_EX}u{color.RESET} or {color.LIGHTMAGENTA_EX}update{color.RESET} to do a full system upgrade.
     ==> to check if you\'re getting the latest packages, use {color.LIGHTMAGENTA_EX}s{color.RESET}  ot {color.LIGHTMAGENTA_EX}sync{color.RESET} to syncronize databases.
