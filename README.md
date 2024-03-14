@@ -6,6 +6,8 @@ Hello and Welcome!
 Crucify is a package manager designed for any arch-based linux distro
 It's simple and fast, and will make your life much faster and easier!
 
+**Crucify** is a somehow a frontend for yay package manager and some others.
+
 ## Installation
 ---
 
@@ -26,7 +28,6 @@ python crucify.py i package_name
 python crucify.py install package_name
 ```
 both are correct! <br>
-you can also add `--aur` after the package name to use AUR repos<br>
 
 to remove:
 ```bash
